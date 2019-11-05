@@ -3,7 +3,7 @@
 package-lock.json
 .yarn-lock
 
-/dist
+*/dist/*
 /src/config/robot.ts
 /server/node_modules
 /client/node_modules
