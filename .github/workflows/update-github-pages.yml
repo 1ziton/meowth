@@ -32,6 +32,9 @@ jobs:
           cd ./client/dist
           git init
       - name: Git Commit
+        env:
+          GITHUB_USER: ${{ secrets.GITHUB_USER }}
+          GITHUB_USER_EMAIL: ${{ secrets.GITHUB_USER_EMAIL }}
         run: |
           ls
           cd ./client/dist
@@ -41,8 +44,6 @@ jobs:
           git commit -m "update github pages"
       - name: Git Push
         env:
-          GITHUB_USER: ${{ secrets.GITHUB_USER }}
-          GITHUB_USER_EMAIL: ${{ secrets.GITHUB_USER_EMAIL }}
           ACCESS_TOKEN: ${{ secrets.ACTIONS_ACCESS_TOKEN }}
         run: |
           cd ./client/dist
