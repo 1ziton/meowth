@@ -1,17 +1,17 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
-import { NgZorroAntdModule } from 'ng-zorro-antd';
-import { HttpClientModule } from '@angular/common/http';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { RebirthHttpModule } from 'rebirth-http';
-
 import { AppComponent } from './app.component';
+import { AppService } from './app.service';
 import { LayoutComponent } from './layout/layout.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register/register.component';
-import { AppService } from './app.service';
+
 
 const routes: Routes = [
   {
@@ -21,7 +21,7 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'system',
-        pathMatch: 'full',
+        pathMatch: 'full'
       },
       {
         path: 'system',
@@ -29,12 +29,14 @@ const routes: Routes = [
       },
       {
         path: 'cicd-variables',
-        loadChildren: './cicd-variables/cicd-variables.module#CicdVariablesModule'
+        loadChildren:
+          './cicd-variables/cicd-variables.module#CicdVariablesModule'
       },
       {
         path: 'system-develop',
-        loadChildren: './system-develop/system-develop.module#SystemDevelopModule'
-      },
+        loadChildren:
+          './system-develop/system-develop.module#SystemDevelopModule'
+      }
     ]
   },
   {
@@ -47,24 +49,25 @@ const COMPONENTS = [
   AppComponent,
   LayoutComponent,
   LoginComponent,
-  RegisterComponent,
-]
+  RegisterComponent
+];
 
 @NgModule({
-  declarations: [
-    ...COMPONENTS,
-  ],
+  declarations: [...COMPONENTS],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+      useHash: true,
+      preloadingStrategy: PreloadAllModules
+    }),
     NgZorroAntdModule,
     HttpClientModule,
     BrowserAnimationsModule,
     RebirthHttpModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [AppService],
   entryComponents: [RegisterComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
