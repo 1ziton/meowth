@@ -1,6 +1,6 @@
 # Meowth
 <p align="center">
-  <a href="https://github.com/1ziton/meowth/actions"><img alt="GitHub Actions status" src="https://github.com/1ziton/meowth/workflows/build&publish/badge.svg"></a>
+  <a href="https://github.com/1ziton/meowth/actions"><img alt="GitHub Actions status" src="https://github.com/1ziton/meowth/workflows/build2publish/badge.svg"></a>
 </p>
 
 智能化 DevOps 辅助系统，该系统是为了加强 CI/CD 的体验，一些配置可以动态设置，机器人，自动消息推送等；
