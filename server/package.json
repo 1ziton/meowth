@@ -40,7 +40,7 @@
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development nodemon --watch './src/***/*' -e ts --exec 'ts-node' ./src/app.ts",
-    "prod": "cross-env NODE_ENV=production nodemon --watch './src/***/*' -e ts --exec 'ts-node' ./src/app.ts",
+    "start:prod": "cross-env NODE_ENV=production nodemon --watch './src/***/*' -e ts --exec 'ts-node' ./src/app.ts",
     "build": "tsc && node dist/app.js",
     "doc": "apidoc -i server/controller -o doc/apidoc"
   },

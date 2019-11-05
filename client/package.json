@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "start:prod": "npm run start -- --c=prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "~8.2.4",
     "@angular/router": "~8.2.4",
     "@ant-design/icons-angular": "^8.0.3",
+    "@pixelmon/chart": "^0.2.1",
     "@pixelmon/pikachu": "^0.2.1",
     "ng-zorro-antd": "^8.2.1",
     "rebirth-http": "^6.0.2",

@@ -1,6 +1,6 @@
 ### 此为注释 忽略文件
 /node_modules
-.package-lock.json
+package-lock.json
 .yarn-lock
 
 /dist
@@ -10,7 +10,5 @@
 
 /server/src/config/robot.ts
 /doc
-/server/package-lock.json
-/server/yarn.lock
-/client/package-lock.json
-/client/yarn.lock
+*/yarn.lock
+*/package-lock.json
