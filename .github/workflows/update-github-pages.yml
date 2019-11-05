@@ -1,4 +1,4 @@
-name: update github pages
+name: build&publish
 
 on:
   push:
