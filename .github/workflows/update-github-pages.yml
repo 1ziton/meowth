@@ -19,10 +19,10 @@ jobs:
         uses: actions/checkout@master
 
       - name: Install Dependencies
-        run: cd client && npm install && cd ..
+        run: cd client && npm install
 
       - name: Ng Build
-        run: npm run publish:client
+        run: npm run publish
 
       - name: Git Init
         run: |
