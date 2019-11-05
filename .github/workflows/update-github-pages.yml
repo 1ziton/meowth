@@ -34,7 +34,7 @@ jobs:
       - name: Git Commit
         run: |
           ls
-          cd ./dist
+          cd ./client/dist
           git add .
           git config user.email "${GITHUB_USER_EMAIL}"
           git config user.name "${GITHUB_USER}"
@@ -45,5 +45,5 @@ jobs:
           GITHUB_USER_EMAIL: ${{ secrets.GITHUB_USER_EMAIL }}
           ACCESS_TOKEN: ${{ secrets.ACTIONS_ACCESS_TOKEN }}
         run: |
-          cd ./dist
+          cd ./client/dist
           git push --set-upstream --force --quiet "https://${ACCESS_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" master:gh-pages
