@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "start:prod": "npm run start -- --c=prod",
+    "build": "ng build --prod --outputPath=dist",
+    "publish": "npm run build -- --base-href=/meowth/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Ng Build
-        run: node ./meowth/node_modules/@angular/cli/bin/ng build --prod --outputPath=dist --base-href=/meowth/
+        run: npm run publish:client
 
       - name: Git Init
         run: |
@@ -30,7 +30,8 @@ jobs:
           git init
       - name: Git Commit
         run: |
-          cd ./meowth/dist
+          ls
+          cd ./dist
           git add .
           git config user.email "${GITHUB_USER_EMAIL}"
           git config user.name "${GITHUB_USER}"
