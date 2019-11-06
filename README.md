@@ -31,6 +31,8 @@
 - client & server 依赖安装
 - 根目录执行 `npm run start`
 
+Online Demo: http://fex.1ziton.com/meowth
+
 ## License
 
 MIT[@1ziton](https://github.com/1ziton)
