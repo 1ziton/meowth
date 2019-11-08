@@ -25,6 +25,7 @@
 - QQ 机器人消息推送 at 相关人员（上一个为基础），相关参考：[cqrobot](https://github.com/1ziton/cqrobot)
 - 定时触发 Pipelines
 - 机器人关键词回复（可以制定关键词回复等）
+- ……
 
 ## Usage
 
